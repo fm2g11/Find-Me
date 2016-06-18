@@ -1,0 +1,23 @@
+{
+  "name": "public",
+  "description": "",
+  "main": "",
+  "authors": [
+    "Tizio Incognito <tizio@incognito.com>"
+  ],
+  "license": "",
+  "homepage": "",
+  "private": true,
+  "dependencies": {
+    "angular": "1.4.x",
+    "bootstrap": "~3.1.1",
+    "angular-ui-router": "^0.3.0"
+  },
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
