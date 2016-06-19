@@ -8,15 +8,18 @@
     <link rel='stylesheet' href='/stylesheets/template.css' />
     <script type='text/javascript' src='/node_modules/angular/angular.js'></script>
     <script type='text/javascript' src='/node_modules/angular-ui-router/release/angular-ui-router.js'></script>
+    <script type='text/javascript' src='/node_modules/angular-sanitize/angular-sanitize.js'></script>
+
     <script type='text/javascript' src='/javascripts/core.js'></script>
     <script type='text/javascript' src='/javascripts/controllers/templateController.js'></script>
     <script type='text/javascript' src='/javascripts/controllers/homeController.js'></script>
+    <script type='text/javascript' src='/javascripts/providers/parserFactory.js'></script>
   </head>
   <body>
 
   	<div class="container" ng-controller="TemplateCtrl">
   		<div class="row">
-    		<div class="col-sm-10 col-sm-offset-1 col-xs-12 col-xs-offset-0 body">
+    		<div class="col-sm-10 col-sm-offset-1 col-xs-12 col-xs-offset-0 boxed">
     			<!-- TOP BAR-->
     			<div class="row">
     				<div class="col-xs-12">

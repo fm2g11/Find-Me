@@ -1,14 +1,14 @@
 <div ng-controller="HomeCtrl">
 	<div class="row">
-		<div class="col-sm-5 body">
-			<textarea class="form-control" rows="5" placeholder="Key" ng-model="key"></textarea>
+		<div class="col-sm-5">
+			<textarea class="form-control" rows="4" placeholder="Key" ng-model="key"></textarea>
 		</div>
-		<div class="col-sm-5 body">
-			<textarea class="form-control" rows="5" placeholder="Value" ng-model="val"></textarea>
+		<div class="col-sm-5">
+			<textarea class="form-control" rows="4" placeholder="Value" ng-model="val"></textarea>
 		</div>
 
-		<div class="col-sm-2 body">
-			<button class="btn btn-success button" ng-click="add()" >Add</button>	
+		<div class="col-sm-2">
+			<button class="btn btn-success button" style="height:90px" ng-click="add()" ng-disabled="canAdd()" >Add</button>	
 		</div>
 	</div>
 
@@ -20,14 +20,24 @@
 					<tr>
 						<th>Key</th>
 						<th>Value</th>
+						<th></th>
+						<th></th>
 					</tr>
 				</thead>
 				<tbody>
 					<tr ng-repeat="item in items">
-						<td>{{ item.key }}</td>
-						<td>{{ item.val }}</td>
-						<td><button class="btn btn-warning" ng-click="edit()" >Edit</button></td>
-						<td><button class="btn btn-danger" ng-click="delete()" >Delete</button></td>
+						<td ng-bind-html="parse(item.key)"></td>
+						<td ng-bind-html="parse(item.val)"></td>
+						<td class="right-align">
+							<button class="btn btn-warning" ng-click="edit($index)" >
+								<span class="glyphicon glyphicon-pencil"></span>
+							</button>
+						</td>
+						<td class="right-align">
+							<button class="btn btn-danger" ng-click="delete($index)">
+								<span class="glyphicon glyphicon-remove"></span>
+							</button>
+						</td>
 					</tr>
 				</tbody>
 			</table>
